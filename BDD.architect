@@ -16,10 +16,10 @@
     <column id="COL2" populated="true" UUID="ed3948c8-e9ca-4586-a5ce-4c230e8001b4" autoIncrement="true" autoIncrementSequenceName="TEMPERATURA_id_temperatura_seq" defaultValue="" name="id_temperatura" nullable="0" physicalName="id_temperatura" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL3" populated="true" UUID="5d7fbab4-130a-4367-b681-842b6962da36" autoIncrement="false" autoIncrementSequenceName="TEMPERATURA_fecha_seq" defaultValue="" name="fecha" nullable="0" physicalName="fecha" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+    <column id="COL3" populated="true" UUID="5d7fbab4-130a-4367-b681-842b6962da36" autoIncrement="false" autoIncrementSequenceName="TEMPERATURA_fecha_seq" defaultValue="" name="fecha" nullable="0" physicalName="fecha" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL4" populated="true" UUID="f5718b10-6620-41d7-b2b5-95d6651121ed" autoIncrement="false" autoIncrementSequenceName="TEMPERATURA_estado_seq" defaultValue="" name="grado" nullable="0" physicalName="grado" precision="2" referenceCount="1" scale="2" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+    <column id="COL4" populated="true" UUID="f5718b10-6620-41d7-b2b5-95d6651121ed" autoIncrement="false" autoIncrementSequenceName="TEMPERATURA_estado_seq" defaultValue="" name="grado" nullable="0" physicalName="grado" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
@@ -39,7 +39,7 @@
     <column id="COL8" populated="true" UUID="085147e9-c047-4bda-9ad5-97bef998c289" autoIncrement="true" autoIncrementSequenceName="MOTOR_id_motor_seq" defaultValue="" name="id_motor" nullable="0" physicalName="id_motor" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL9" populated="true" UUID="abe5001e-8467-4c7d-ba18-afb3057c2697" autoIncrement="false" autoIncrementSequenceName="MOTOR_fecha_seq" defaultValue="" name="fecha" nullable="0" physicalName="fecha" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+    <column id="COL9" populated="true" UUID="abe5001e-8467-4c7d-ba18-afb3057c2697" autoIncrement="false" autoIncrementSequenceName="MOTOR_fecha_seq" defaultValue="" name="fecha" nullable="0" physicalName="fecha" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
     <column id="COL10" populated="true" UUID="61de3f52-dba9-48aa-926a-3079ceccfee2" autoIncrement="false" autoIncrementSequenceName="MOTOR_encendido_seq" defaultValue="" name="encendido" nullable="0" physicalName="encendido" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
