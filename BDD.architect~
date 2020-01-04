@@ -19,7 +19,7 @@
     <column id="COL3" populated="true" UUID="5d7fbab4-130a-4367-b681-842b6962da36" autoIncrement="false" autoIncrementSequenceName="TEMPERATURA_fecha_seq" defaultValue="" name="fecha" nullable="0" physicalName="fecha" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL4" populated="true" UUID="f5718b10-6620-41d7-b2b5-95d6651121ed" autoIncrement="false" autoIncrementSequenceName="TEMPERATURA_estado_seq" defaultValue="" name="grado" nullable="0" physicalName="grado" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL4" populated="true" UUID="f5718b10-6620-41d7-b2b5-95d6651121ed" autoIncrement="false" autoIncrementSequenceName="TEMPERATURA_estado_seq" defaultValue="" name="temperatura" nullable="0" physicalName="temperatura" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
@@ -33,16 +33,16 @@
     </index>
    </folder>
   </table>
-  <table id="TAB7" populated="true" UUID="67dbeb1f-4d34-48af-93b2-bf67a4976f5f" name="MOTOR" objectType="TABLE" physicalName="MOTOR" >
+  <table id="TAB7" populated="true" UUID="67dbeb1f-4d34-48af-93b2-bf67a4976f5f" name="HUMEDAD" objectType="TABLE" physicalName="HUMEDAD" >
    <remarks></remarks>
    <folder id="FOLTAB71" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL8" populated="true" UUID="085147e9-c047-4bda-9ad5-97bef998c289" autoIncrement="true" autoIncrementSequenceName="MOTOR_id_motor_seq" defaultValue="" name="id_motor" nullable="0" physicalName="id_motor" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL8" populated="true" UUID="085147e9-c047-4bda-9ad5-97bef998c289" autoIncrement="true" autoIncrementSequenceName="HUMEDAD_id_motor_seq" defaultValue="" name="id_humedad" nullable="0" physicalName="id_humedad" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL9" populated="true" UUID="abe5001e-8467-4c7d-ba18-afb3057c2697" autoIncrement="false" autoIncrementSequenceName="MOTOR_fecha_seq" defaultValue="" name="fecha" nullable="0" physicalName="fecha" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL9" populated="true" UUID="abe5001e-8467-4c7d-ba18-afb3057c2697" autoIncrement="false" autoIncrementSequenceName="HUMEDAD_fecha_seq" defaultValue="" name="fecha" nullable="0" physicalName="fecha" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL10" populated="true" UUID="61de3f52-dba9-48aa-926a-3079ceccfee2" autoIncrement="false" autoIncrementSequenceName="MOTOR_encendido_seq" defaultValue="" name="encendido" nullable="0" physicalName="encendido" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL10" populated="true" UUID="61de3f52-dba9-48aa-926a-3079ceccfee2" autoIncrement="false" autoIncrementSequenceName="HUMEDAD_encendido_seq" defaultValue="" name="humedad" nullable="0" physicalName="humedad" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
@@ -51,20 +51,44 @@
     <folder id="FOLTAB72" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB74" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX11" populated="true" UUID="961cc5b8-87e9-4cf6-9119-5f436d726f67" clustered="false" name="MOTOR_pk" physicalName="motor_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC12" populated="true" UUID="67441beb-f292-40d0-a34c-93a53a83022e" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="id_motor" physicalName="id_motor" />
+    <index id="IDX11" populated="true" UUID="961cc5b8-87e9-4cf6-9119-5f436d726f67" clustered="false" name="HUMEDAD_pk" physicalName="motor_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC12" populated="true" UUID="67441beb-f292-40d0-a34c-93a53a83022e" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="id_humedad" physicalName="id_humedad" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB13" populated="true" UUID="18ffebb8-a16d-4917-9f0a-ba493f309500" name="PRESION" objectType="TABLE" physicalName="PRESION" >
+   <remarks></remarks>
+   <folder id="FOLTAB131" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL14" populated="true" UUID="f6234ad2-2495-45b7-b40a-e31870bb5e59" autoIncrement="true" autoIncrementSequenceName="PRESION_id_presion_seq" defaultValue="" name="id_presion" nullable="0" physicalName="id_presion" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL15" populated="true" UUID="ee187f1e-ce7e-4e1d-b793-61742d24f306" autoIncrement="false" autoIncrementSequenceName="PRESION_fecha_seq" defaultValue="" name="fecha" nullable="0" physicalName="fecha" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL16" populated="true" UUID="d3727b59-94f8-4f51-bcd7-bb2ef082d5b5" autoIncrement="false" autoIncrementSequenceName="PRESION_presion_seq" defaultValue="" name="presion" nullable="0" physicalName="presion" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB133" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB132" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB134" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX17" populated="true" UUID="00c711f2-7b06-4728-9962-9d8449c0817b" clustered="false" name="PRESION_pk" physicalName="PRESION_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC18" populated="true" UUID="23973217-bf72-403e-b7c2-cd171776296d" ascendingOrDescending="UNSPECIFIED" column-ref="COL14" name="id_presion" physicalName="id_presion" />
     </index>
    </folder>
   </table>
   <relationships>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="true"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="0.8408964152537145" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
-  <table-pane table-ref="TAB1" x="108" y="79" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB7" x="457" y="83" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB1" x="34" y="42" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB7" x="299" y="44" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB13" x="552" y="46" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">
