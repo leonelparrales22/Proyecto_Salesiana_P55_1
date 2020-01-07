@@ -1,6 +1,6 @@
 <?php
 
-class Admin extends CI_Controller {
+class Temperatura extends CI_Controller {
 
 	public function __construct()
 	{
@@ -9,6 +9,6 @@ class Admin extends CI_Controller {
     
     public function index()
     {
-        echo "Hola Mundo";
+        $this->load->view("Temperatura/test.php");
     } 
 }
