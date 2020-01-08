@@ -1,4 +1,3 @@
-
 <script src="<?php echo base_url();?>code/highcharts.js"></script>
 <script src="<?php echo base_url();?>code/modules/exporting.js"></script>
 <script src="<?php echo base_url();?>code/modules/export-data.js"></script>
@@ -105,11 +104,24 @@ Highcharts.chart('container', {
             var data = [],
                 time = (new Date()).getTime(),
                 i;
+            
+            var temp = [
+            <?php
+            $conexion = mysqli_connect("localhost", "root", "", "p1") or
+            die("Problemas con la conexión");
+
+            $registros = mysqli_query($conexion, "SELECT * FROM `temperatura` ORDER BY `id_temperatura` DESC LIMIT 20") or
+            die("Problemas en el select:" . mysqli_error($conexion));
+            while ($reg = mysqli_fetch_array($registros)) {
+            echo $reg['temperatura'].",";
+            }
+            mysqli_close($conexion);
+            ?>];
 
             for (i = -19; i <= 0; i += 1) {
                 data.push({
                     x: time + i * 1000,
-                    y: 0
+                    y: temp[i*(-1)]
                 });
             }
             return data;
