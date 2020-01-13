@@ -1,4 +1,5 @@
 void setup() {
+  Serial.begin(9600);
   pinMode(LED_BUILTIN, OUTPUT);     // Initialize the LED_BUILTIN pin as an output
 }
 
@@ -10,4 +11,5 @@ void loop() {
   delay(1000);                      // Wait for a second
   digitalWrite(LED_BUILTIN, HIGH);  // Turn the LED off by making the voltage HIGH
   delay(2000);                      // Wait for two seconds (to demonstrate the active low LED)
+  Serial.print("LEONEL PARRALES");
 }
