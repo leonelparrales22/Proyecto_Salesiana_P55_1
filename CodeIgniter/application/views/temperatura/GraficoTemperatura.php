@@ -118,6 +118,8 @@ Highcharts.chart('container', {
             mysqli_close($conexion);
             ?>];
 
+        console.log(temp);
+
             for (i = -19; i <= 0; i += 1) {
                 data.push({
                     x: time + i * 1000,
