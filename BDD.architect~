@@ -51,7 +51,7 @@
     <folder id="FOLTAB72" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB74" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX11" populated="true" UUID="961cc5b8-87e9-4cf6-9119-5f436d726f67" clustered="false" name="HUMEDAD_pk" physicalName="motor_pk" primaryKeyIndex="true" unique="false" >
+    <index id="IDX11" populated="true" UUID="961cc5b8-87e9-4cf6-9119-5f436d726f67" clustered="false" name="HUMEDAD_pk" physicalName="humedad_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC12" populated="true" UUID="67441beb-f292-40d0-a34c-93a53a83022e" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="id_humedad" physicalName="id_humedad" />
     </index>
    </folder>
@@ -74,7 +74,7 @@
     <folder id="FOLTAB132" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB134" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX17" populated="true" UUID="00c711f2-7b06-4728-9962-9d8449c0817b" clustered="false" name="PRESION_pk" physicalName="PRESION_pk" primaryKeyIndex="true" unique="false" >
+    <index id="IDX17" populated="true" UUID="00c711f2-7b06-4728-9962-9d8449c0817b" clustered="false" name="PRESION_pk" physicalName="presion_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC18" populated="true" UUID="23973217-bf72-403e-b7c2-cd171776296d" ascendingOrDescending="UNSPECIFIED" column-ref="COL14" name="id_presion" physicalName="id_presion" />
     </index>
    </folder>
@@ -82,7 +82,7 @@
   <relationships>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="true"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="0.8408964152537145" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
