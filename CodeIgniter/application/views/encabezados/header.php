@@ -120,9 +120,13 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Mostrar Gráfico:</h6>
-            <a class="collapse-item" href="<?php echo base_url();?>index.php/Temperatura/GraficoTemperatura">Temperatura</a>
-            <a class="collapse-item" href="<?php echo base_url();?>index.php/Presion/GraficoPresion">Presión</a>
-            <a class="collapse-item" href="<?php echo base_url();?>index.php/Humedad/GraficoHumedad">Humedad</a>
+            <!-- <a class="collapse-item" href="<?php echo base_url();?>index.php/Temperatura/GraficoTemperatura">Temperatura</a> -->
+            <!-- <a class="collapse-item" href="<?php echo base_url();?>index.php/Presion/GraficoPresion">Presión</a> -->
+            <!-- <a class="collapse-item" href="<?php echo base_url();?>index.php/Humedad/GraficoHumedad">Humedad</a> -->
+
+            <a class="collapse-item" href="<?php echo base_url();?>Temperatura/GraficoTemperatura">Temperatura</a>
+            <a class="collapse-item" href="<?php echo base_url();?>Presion/GraficoPresion">Presión</a>
+            <a class="collapse-item" href="<?php echo base_url();?>Humedad/GraficoHumedad">Humedad</a>
           </div>
         </div>
       </li>
@@ -137,8 +141,10 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Accionadores:</h6>
-            <a class="collapse-item" href="<?php echo base_url();?>index.php/Botones/Ventilador">Ventilador</a>
-            <a class="collapse-item" href="<?php echo base_url();?>index.php/Botones/Foco">Foco</a>
+            <!-- <a class="collapse-item" href="<?php echo base_url();?>index.php/Botones/Ventilador">Ventilador</a> -->
+            <!-- <a class="collapse-item" href="<?php echo base_url();?>index.php/Botones/Foco">Foco</a> -->
+            <a class="collapse-item" href="<?php echo base_url();?>Botones/Ventilador">Ventilador</a>
+            <a class="collapse-item" href="<?php echo base_url();?>Botones/Foco">Foco</a>
           </div>
         </div>
       </li>
