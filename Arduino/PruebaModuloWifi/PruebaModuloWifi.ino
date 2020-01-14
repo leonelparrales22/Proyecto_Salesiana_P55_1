@@ -19,6 +19,7 @@ void setup() {
   while(WiFi.status()!=WL_CONNECTED)delay(500);
   WiFi.mode(WIFI_STA);
   Serial.print(WiFi.localIP());
+  Serial.print("Hola");
   server.on("/",WebsiteContent);
   server.begin();
 }
