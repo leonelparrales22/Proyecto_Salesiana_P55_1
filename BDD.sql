@@ -1,5 +1,13 @@
 
 
+CREATE TABLE REGISTRO (
+                id_registro INT AUTO_INCREMENT NOT NULL,
+                fecha DATETIME NOT NULL,
+                descripcion VARCHAR(100) NOT NULL,
+                PRIMARY KEY (id_registro)
+);
+
+
 CREATE TABLE ACTIVADORES (
                 id_activador INT AUTO_INCREMENT NOT NULL,
                 nombre VARCHAR(20) NOT NULL,
@@ -7,28 +15,6 @@ CREATE TABLE ACTIVADORES (
                 PRIMARY KEY (id_activador)
 );
 
-CREATE TABLE PRESION (
-                id_presion INT AUTO_INCREMENT NOT NULL,
-                fecha DATETIME NOT NULL,
-                presion INT NOT NULL,
-                PRIMARY KEY (id_presion)
-);
-
-
-CREATE TABLE HUMEDAD (
-                id_humedad INT AUTO_INCREMENT NOT NULL,
-                fecha DATETIME NOT NULL,
-                humedad INT NOT NULL,
-                PRIMARY KEY (id_humedad)
-);
-
-
-CREATE TABLE TEMPERATURA (
-                id_temperatura INT AUTO_INCREMENT NOT NULL,
-                fecha DATETIME NOT NULL,
-                temperatura INT NOT NULL,
-                PRIMARY KEY (id_temperatura)
-);
 
 CREATE TABLE PRESION (
                 id_presion INT AUTO_INCREMENT NOT NULL,
@@ -52,7 +38,6 @@ CREATE TABLE TEMPERATURA (
                 temperatura INT NOT NULL,
                 PRIMARY KEY (id_temperatura)
 );
-
 
 INSERT INTO temperatura (fecha,temperatura) VALUES(CURRENT_TIMESTAMP(),22);
 INSERT INTO temperatura (fecha,temperatura) VALUES(CURRENT_TIMESTAMP(),23);
