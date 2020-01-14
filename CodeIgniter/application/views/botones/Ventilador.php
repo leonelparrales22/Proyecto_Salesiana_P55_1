@@ -74,11 +74,37 @@ Encender/Apagar Ventilador:
 <br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
 <label class="switch">
-  <input type="checkbox">
-  <div class="slider round"></div>
-</label>
+          <input class="active" type="checkbox" 
+          
+          <?php
+          //include(echo base_url();'database.php');
+          $conexion = mysqli_connect("localhost", "root", "", "p1") or
+          die("Problemas con la conexion");
+          $registros = mysqli_query($conexion, 'SELECT * FROM `activadores` WHERE nombre="VENTILADOR"') or
+          die("Problemas en el select:" . mysqli_error($conexion));
+
+          while ($reg = mysqli_fetch_array($registros)) {
+           $reg['estado'];
+
+           if ($reg['estado']==1) {
+              echo ' checked="checked"';
+            }
+          }
+          mysqli_close($conexion);
+          ?>
+          
+          >
+
+          <div class="slider round"></div>
+        </label>
 </center>
 
 <br>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Frontend Logic -->
+<script src="<?php echo base_url();?>app.js"></script>
 
 
