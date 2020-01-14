@@ -101,3 +101,8 @@ INSERT INTO humedad (fecha,humedad) VALUES(CURRENT_TIMESTAMP(),23);
 INSERT INTO humedad (fecha,humedad) VALUES(CURRENT_TIMESTAMP(),18);
 INSERT INTO humedad (fecha,humedad) VALUES(CURRENT_TIMESTAMP(),17);
 INSERT INTO humedad (fecha,humedad) VALUES(CURRENT_TIMESTAMP(),22);
+
+
+
+INSERT INTO activadores (nombre,estado) VALUES ("VENTILADOR",false);
+INSERT INTO activadores (nombre,estado) VALUES ("FOCO",true);
