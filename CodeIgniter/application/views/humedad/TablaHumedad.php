@@ -31,23 +31,14 @@
         <tbody>
 
           <?php
-            $conexion = mysqli_connect("localhost", "root", "", "p1") or
-            die("Problemas con la conexión");
-
-            $registros = mysqli_query($conexion, "SELECT * FROM `humedad`") or
-            die("Problemas en el select:" . mysqli_error($conexion));
-            while ($reg = mysqli_fetch_array($registros)) {
+            foreach ($datos->result_array() as $reg) {
             echo "<tr>";
             echo "<td>".$reg['id_humedad']."</td>";
             echo "<td>".$reg['fecha']."</td>";
             echo "<td>".$reg['humedad']."</td>";  
             echo "</tr>";
             }
-            mysqli_close($conexion);
           ?>
-
-          
-          
 
         </tbody>
       </table>

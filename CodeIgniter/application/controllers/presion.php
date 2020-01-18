@@ -6,6 +6,8 @@ class Presion extends CI_Controller {
         parent::__construct();
         $this->load->helper('mihelper');
         $this->load->helper('url');
+        $this->load->model('presionModelo');
+        $this->load->database();
     }
 
     function GraficoPresion(){
@@ -15,8 +17,9 @@ class Presion extends CI_Controller {
     }
 
     function TablaPresion(){
+        $data["datos"]= $this->presionModelo->ver_Registros_Presion();
         $this->load->view('encabezados/header.php');
-        $this->load->view('presion/TablaPresion.php');
+        $this->load->view('presion/TablaPresion.php',$data);
     }
 }
 ?>

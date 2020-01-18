@@ -6,6 +6,8 @@ class Humedad extends CI_Controller {
         parent::__construct();
         $this->load->helper('mihelper');
         $this->load->helper('url');
+        $this->load->model('humedadModelo');
+        $this->load->database();
     }
 
     function GraficoHumedad(){
@@ -15,7 +17,8 @@ class Humedad extends CI_Controller {
     }
 
     function TablaHumedad(){
-        $this->load->view('encabezados/header.php');
+        $data["datos"]= $this->humedadModelo->ver_Registros_Humedad();
+        $this->load->view('encabezados/header.php',$data);
         $this->load->view('humedad/TablaHumedad.php');
     }
 }

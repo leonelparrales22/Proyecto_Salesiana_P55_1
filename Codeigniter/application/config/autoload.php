@@ -133,3 +133,6 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 $autoload['model'] = array();
+
+/*PARA CONECTARME AUTOMATICAMENTE A LA BASE DE DATOS EN TODAS LAS PAGINAS DE MI APLICACION*/
+$autoload['database'] = array();

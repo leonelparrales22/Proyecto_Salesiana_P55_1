@@ -91,3 +91,6 @@ INSERT INTO humedad (fecha,humedad) VALUES(CURRENT_TIMESTAMP(),22);
 
 INSERT INTO activadores (nombre,estado) VALUES ("VENTILADOR",false);
 INSERT INTO activadores (nombre,estado) VALUES ("FOCO",true);
+
+
+INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"VENTILADOR SE ENCENDIO");

@@ -31,23 +31,14 @@
         <tbody>
 
           <?php
-            $conexion = mysqli_connect("localhost", "root", "", "p1") or
-            die("Problemas con la conexión");
-
-            $registros = mysqli_query($conexion, "SELECT * FROM `presion`") or
-            die("Problemas en el select:" . mysqli_error($conexion));
-            while ($reg = mysqli_fetch_array($registros)) {
+            foreach ($datos->result_array() as $reg) {
             echo "<tr>";
             echo "<td>".$reg['id_presion']."</td>";
             echo "<td>".$reg['fecha']."</td>";
             echo "<td>".$reg['presion']."</td>";  
             echo "</tr>";
             }
-            mysqli_close($conexion);
           ?>
-
-          
-          
 
         </tbody>
       </table>
@@ -61,7 +52,6 @@
 </div>
 
 <!-- End of Main Content -->
-
 
 <!-- Footer -->
 <footer class="sticky-footer bg-white">
