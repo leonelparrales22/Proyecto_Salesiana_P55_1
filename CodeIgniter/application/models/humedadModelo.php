@@ -6,6 +6,11 @@ class HumedadModelo extends CI_Model {
         parent::__construct();
     }
 
+    function ultimos_Registros(){
+        $query = $this->db->query('SELECT * FROM `humedad` ORDER BY `id_humedad` DESC LIMIT 20');
+        return $query;
+    }
+
     function ver_Registros_Humedad(){
         $query = $this->db->query('SELECT * FROM humedad');
         return $query;

@@ -104,10 +104,19 @@ Highcharts.chart('container', {
                 time = (new Date()).getTime(),
                 i;
 
+            var temp = [
+                <?php
+                    foreach ($datos->result_array() as $reg) {
+                         echo $reg['presion'].",";
+                    }
+                  ?>
+            ];
+
+
             for (i = -19; i <= 0; i += 1) {
                 data.push({
                     x: time + i * 1000,
-                    y: 0
+                    y: temp[i*(-1)]
                 });
             }
             return data;

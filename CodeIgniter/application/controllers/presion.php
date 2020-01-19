@@ -11,8 +11,9 @@ class Presion extends CI_Controller {
     }
 
     function GraficoPresion(){
+        $data["datos"]= $this->presionModelo->ultimos_Registros();
         $this->load->view('encabezados/header.php');
-        $this->load->view('presion/GraficoPresion.php');
+        $this->load->view('presion/GraficoPresion.php',$data);
         $this->load->view('encabezados/footer.php');
     }
 

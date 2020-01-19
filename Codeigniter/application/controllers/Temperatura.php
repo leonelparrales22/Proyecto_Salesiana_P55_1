@@ -12,14 +12,16 @@ class Temperatura extends CI_Controller {
     }
 
     function index(){
+        $data["datos"]= $this->temperaturaModelo->ultimos_Registros();
         $this->load->view('encabezados/header.php');
-        $this->load->view('temperatura/GraficoTemperatura.php');
+        $this->load->view('temperatura/GraficoTemperatura.php',$data);
         $this->load->view('encabezados/footer.php');
     }
 
     function GraficoTemperatura(){
+        $data["datos"]= $this->temperaturaModelo->ultimos_Registros();
         $this->load->view('encabezados/header.php');
-        $this->load->view('temperatura/GraficoTemperatura.php');
+        $this->load->view('temperatura/GraficoTemperatura.php',$data);
         $this->load->view('encabezados/footer.php');
     }
 

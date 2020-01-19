@@ -34,8 +34,14 @@ Highcharts.chart('container', {
                 myTimervar = setInterval( async function () {
 
                     var x = (new Date()).getTime(), // current time
-                        y = parseInt(await fetch('<?php echo base_url();?>BDDTemperatura1.php')
-                                .then( respuesta => respuesta.text() ));
+
+                    //y = parseInt(await fetch('<?php echo base_url();?>BDDTemperatura1.php')
+                    //          .then( respuesta => respuesta.text() ));
+
+                    y = parseInt(await fetch('<?php echo base_url();?>/application/models/BDDTemperatura1.php')
+                              .then( respuesta => respuesta.text() ));          
+
+
                     console.log('y=',y);
                     series.addPoint([x, y], true, true);
 
@@ -107,21 +113,12 @@ Highcharts.chart('container', {
             
             var temp = [
                 <?php
-                    $conexion = mysqli_connect("localhost", "root", "", "p1") or
-                    die("Problemas con la conexión");
-        
-                    $registros = mysqli_query($conexion, "SELECT * FROM `temperatura` ORDER BY `id_temperatura` DESC LIMIT 20") or
-                    die("Problemas en el select:" . mysqli_error($conexion));
-                    while ($reg = mysqli_fetch_array($registros)) {
-                    echo $reg['temperatura'].",";
+                    foreach ($datos->result_array() as $reg) {
+                         echo $reg['temperatura'].",";
                     }
-                    mysqli_close($conexion);
-                ?>
+                  ?>
             ];
 
-            
-
-        console.log(temp);
 
             for (i = -19; i <= 0; i += 1) {
                 data.push({
@@ -135,6 +132,10 @@ Highcharts.chart('container', {
 });
 		</script>
 
+
+<?php
+echo $this->temperaturaModelo->grafica_RealTime();
+?>
 
 
 <br>

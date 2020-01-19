@@ -11,8 +11,9 @@ class Humedad extends CI_Controller {
     }
 
     function GraficoHumedad(){
+        $data["datos"]= $this->humedadModelo->ultimos_Registros();
         $this->load->view('encabezados/header.php');
-        $this->load->view('humedad/GraficoHumedad.php');
+        $this->load->view('humedad/GraficoHumedad.php',$data);
         $this->load->view('encabezados/footer.php');
     }
 

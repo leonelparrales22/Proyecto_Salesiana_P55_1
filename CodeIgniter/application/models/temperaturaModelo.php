@@ -10,5 +10,18 @@ class TemperaturaModelo extends CI_Model {
         $query = $this->db->query('SELECT * FROM temperatura');
         return $query;
     }
+
+    function ultimos_Registros(){
+        $query = $this->db->query('SELECT * FROM `temperatura` ORDER BY `id_temperatura` DESC LIMIT 20');
+        return $query;
+    }
+
+    function grafica_RealTime(){
+        $query = $this->db->query('select * from temperatura ORDER BY fecha DESC LIMIT 1');
+        foreach ($query->result_array() as $reg) {
+            return $reg['temperatura'];
+        }
+    }
+
 }
 ?>

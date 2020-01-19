@@ -6,6 +6,11 @@ class PresionModelo extends CI_Model {
         parent::__construct();
     }
 
+    function ultimos_Registros(){
+        $query = $this->db->query('SELECT * FROM `presion` ORDER BY `id_presion` DESC LIMIT 20');
+        return $query;
+    }
+
     function ver_Registros_Presion(){
         $query = $this->db->query('SELECT * FROM presion');
         return $query;
