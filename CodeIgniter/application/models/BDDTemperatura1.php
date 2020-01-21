@@ -1,6 +1,9 @@
 <?php
 $conexion = mysqli_connect("localhost", "root", "", "p1") or
 die("Problemas con la conexión");
+//$conexion = mysqli_connect("192.168.0.105", "root", "Chocolate7", "BDD") or
+//die("Problemas con la conexion");
+
 
 $registros = mysqli_query($conexion, "select * from temperatura ORDER BY fecha DESC LIMIT 1") or
 die("Problemas en el select:" . mysqli_error($conexion));

@@ -1,6 +1,6 @@
 
 
-CREATE TABLE REGISTRO (
+CREATE TABLE registro (
                 id_registro INT AUTO_INCREMENT NOT NULL,
                 fecha DATETIME NOT NULL,
                 descripcion VARCHAR(100) NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE REGISTRO (
 );
 
 
-CREATE TABLE ACTIVADORES (
+CREATE TABLE activadores (
                 id_activador INT AUTO_INCREMENT NOT NULL,
                 nombre VARCHAR(20) NOT NULL,
                 estado BOOLEAN NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE ACTIVADORES (
 );
 
 
-CREATE TABLE PRESION (
+CREATE TABLE presion (
                 id_presion INT AUTO_INCREMENT NOT NULL,
                 fecha DATETIME NOT NULL,
                 presion INT NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE PRESION (
 );
 
 
-CREATE TABLE HUMEDAD (
+CREATE TABLE humedad (
                 id_humedad INT AUTO_INCREMENT NOT NULL,
                 fecha DATETIME NOT NULL,
                 humedad INT NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE HUMEDAD (
 );
 
 
-CREATE TABLE TEMPERATURA (
+CREATE TABLE temperatura (
                 id_temperatura INT AUTO_INCREMENT NOT NULL,
                 fecha DATETIME NOT NULL,
                 temperatura INT NOT NULL,

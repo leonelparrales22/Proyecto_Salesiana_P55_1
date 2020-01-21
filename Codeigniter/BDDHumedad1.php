@@ -1,7 +1,7 @@
 <?php
-$conexion = mysqli_connect("localhost", "root", "", "p1") or
-die("Problemas con la conexión");
-
+//$conexion = mysqli_connect("localhost", "root", "", "p1") or
+//die("Problemas con la conexión");
+include('database.php');
 $registros = mysqli_query($conexion, "select * from humedad ORDER BY fecha DESC LIMIT 1") or
 die("Problemas en el select:" . mysqli_error($conexion));
 
