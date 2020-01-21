@@ -1,0 +1,174 @@
+ACCESO NO AUTORIZADO
+HQ>
+HQ>enable
+HQ#sho
+HQ#show run
+HQ#show running-config
+Building configuration...
+
+
+Current configuration : 4156 bytes
+!
+! Last configuration change at 18:54:18 UTC Sat Jan 11 2020
+!
+version 16.9
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+!
+hostname HQ
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+ip dhcp pool Administrador
+ network 172.16.10.0 255.255.255.0
+ default-router 172.16.10.1
+!
+ip dhcp pool WebDesigner
+ network 172.16.20.0 255.255.255.0
+ default-router 172.16.20.1
+!
+ip dhcp pool Clientes
+ network 172.16.30.0 255.255.255.0
+ default-router 172.16.30.1
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+multilink bundle-name authenticated
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1173964436
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1173964436
+ revocation-check none
+ rsakeypair TP-self-signed-1173964436
+!
+!
+crypto pki certificate chain TP-self-signed-1173964436
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 31313733 39363434 3336301E 170D3230 30313131 31343033
+  34315A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 31373339
+  36343433 36308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201
+  0A028201 0100BADA AEE15F39 6D543FE1 7BE2B8D9 86540A03 2569C7D6 071CC58B
+  872F3151 134DA21A 3960A858 56CE6F9D D67A75CA 04C8C6FA C9F3E761 CDC4DBD1
+  4060720C D95A1976 861413D3 2FCCFE6E 04A4B40D BC1626E0 734D9611 467E040F
+  1EC29D15 516B631B 70C66BAD 290775C7 216FD744 E4899F74 1D916EAC 1A2B0880
+  41A45139 79252A3B CE912682 A26646E6 A3480E84 08119C56 F6BDF146 367F393C
+  6B2C5030 F5BA07A0 2D9942CD 353D1329 F2CABBBF AF5BDC02 FA2A2F1B 289919BB
+  56258EBB 2C7B2444 AC56B4FE 69BB0217 2C3CE045 3602C244 69A59CF9 CEAFF437
+  439F56B3 F9DB8F10 253620EE 4511DBB8 856DCFAD 1595FEB4 E77A553F 7AB8DCF2
+  52A1E568 13870203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF
+  301F0603 551D2304 18301680 14C45E74 FB605959 940008F4 1C94F795 6E0A2785
+  28301D06 03551D0E 04160414 C45E74FB 60595994 0008F41C 94F7956E 0A278528
+  300D0609 2A864886 F70D0101 05050003 82010100 12E52243 97FC7BCD FEE4A0F1
+  69F96BA5 4D6A1460 0A40DA22 D983AB0E 0F822E0A 4CC27FAA D337D0ED 079D6CE3
+  403BCDAB 739F68CD F4A15257 7946B583 81562CFF 7FD77280 B683FB49 01F641EE
+  A70A668B 84E71C21 EE940029 D8C29E5C A9DBF1B3 EA60034C 2B401246 370DA4A2
+  3E605469 2B7489AC FD3FAA82 E66112EF 07F456D6 BD9D99C4 264BF9BF 33435626
+  627B8522 E1517EAB 30F899B1 8A206F43 948C1D6D 484F1573 6969797D E352D87C
+  12836C0B FD90D055 4F30E5DA A4558308 4BDC03E3 73FC6EA9 23009645 0E7DAFBA
+  3FBEFC18 654A55D1 B4965C83 E46F042E 7FF60431 06C0010C 54F268F6 51AA8D5C
+  D6980E66 23A7729C 7B8D7859 B52EAFFF 503704C2
+        quit
+!
+license udi pid ISR4221/K9 sn FJC2308A07L
+no license smart enable
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+!
+!
+!
+redundancy
+ mode none
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/0/1.10
+ encapsulation dot1Q 10
+ ip address 172.16.10.1 255.255.255.0
+!
+interface GigabitEthernet0/0/1.20
+ encapsulation dot1Q 20
+ ip address 172.16.20.1 255.255.255.0
+!
+interface GigabitEthernet0/0/1.30
+ encapsulation dot1Q 30
+ ip address 172.16.30.1 255.255.255.0
+!
+interface Serial0/1/0
+ ip address 200.165.209.65 255.255.255.252
+!
+interface Serial0/1/1
+ ip address 10.10.10.9 255.255.255.252
+!
+router rip
+ network 10.0.0.0
+ network 172.16.0.0
+ network 180.165.0.0
+ network 200.165.209.0
+!
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+ip route 180.165.100.0 255.255.255.252 10.10.10.10
+ip route 180.165.100.32 255.255.255.252 200.165.209.66
+ip route 192.168.0.0 255.255.255.0 200.165.209.66
+ip route 192.168.0.0 255.255.255.0 10.10.10.10
+!
+!
+!
+!
+!
+!
+control-plane
+!
+banner motd ^CACCESO NO AUTORIZADO^C
+!
+line con 0
+ transport input none
+ stopbits 1
+line vty 0 4
+ login
+!
+!
+!
+!
+!
+!
+end
