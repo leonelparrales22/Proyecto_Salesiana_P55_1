@@ -34,13 +34,9 @@ Highcharts.chart('container', {
                 myTimervar = setInterval( async function () {
 
                     var x = (new Date()).getTime(), // current time
-
-                    //y = parseInt(await fetch('<?php echo base_url();?>BDDTemperatura1.php')
-                    //          .then( respuesta => respuesta.text() ));
-
-                    y = parseInt(await fetch('<?php echo base_url();?>/application/models/BDDTemperatura1.php')
-                              .then( respuesta => respuesta.text() ));          
-
+                    
+                    y = parseInt(await fetch('<?php echo base_url();?>index.php/Temperatura/llamadabase')
+                              .then( respuesta => respuesta.text() ));     
 
                     console.log('y=',y);
                     series.addPoint([x, y], true, true);
@@ -131,11 +127,4 @@ Highcharts.chart('container', {
     }]
 });
 		</script>
-
-
-<?php
-echo $this->temperaturaModelo->grafica_RealTime();
-?>
-
-
 <br>
