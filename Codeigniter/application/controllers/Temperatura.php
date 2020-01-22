@@ -6,20 +6,21 @@ class Temperatura extends CI_Controller {
         parent::__construct();
         $this->load->helper('mihelper');
         $this->load->helper('url');
-        $this->load->model('temperaturaModelo');
+
+        $this->load->model('TemperaturaModelo');
         $this->load->database();
 
     }
 
     function index(){
-        $data["datos"]= $this->temperaturaModelo->ultimos_Registros();
+        $data["datos"]= $this->TemperaturaModelo->ultimos_Registros();
         $this->load->view('encabezados/header.php');
         $this->load->view('temperatura/GraficoTemperatura.php',$data);
         $this->load->view('encabezados/footer.php');
     }
 
     function GraficoTemperatura(){
-        $data["datos"]= $this->temperaturaModelo->ultimos_Registros();
+        $data["datos"]= $this->TemperaturaModelo->ultimos_Registros();
         $this->load->view('encabezados/header.php');
         $this->load->view('temperatura/GraficoTemperatura.php',$data);
         
@@ -28,7 +29,7 @@ class Temperatura extends CI_Controller {
     }
 
     function TablaTemperatura(){
-        $data["datos"]= $this->temperaturaModelo->ver_Registros_Temperatura();
+        $data["datos"]= $this->TemperaturaModelo->ver_Registros_Temperatura();
         $this->load->view('encabezados/header.php');
         $this->load->view('temperatura/TablaTemperatura.php',$data);
     }

@@ -65,12 +65,12 @@ input:checked + .slider:before {
 
 
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-Encender/Apagar Foco:
+Encender/Apagar Ventilador:
 <br>
 <br>
 <center>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-<img src="<?php echo base_url();?>img/Foco.jpg" alt="Smiley face" height="300" width="300">
+<img src="<?php echo base_url();?>img/Ventilador.jpg" alt="Smiley face" height="300" width="300">
 <br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
 <label class="switch">
@@ -78,9 +78,9 @@ Encender/Apagar Foco:
           
           <?php
           //include(echo base_url();'database.php');
-          $conexion = mysqli_connect("localhost", "root", "", "p1") or
+          $conexion = mysqli_connect("localhost", "leonel", "123456", "p1") or
           die("Problemas con la conexion");
-          $registros = mysqli_query($conexion, 'SELECT * FROM `activadores` WHERE nombre="FOCO"') or
+          $registros = mysqli_query($conexion, 'SELECT * FROM `activadores` WHERE nombre="VENTILADOR"') or
           die("Problemas en el select:" . mysqli_error($conexion));
 
           while ($reg = mysqli_fetch_array($registros)) {
@@ -101,6 +101,9 @@ Encender/Apagar Foco:
 
 <br>
 
+
 <script src="<?php echo base_url();?>vendor/jquery/jquery.min.js"></script>
     <!-- Frontend Logic -->
 <script src="<?php echo base_url();?>application/assets/js/app.js"></script>
+
+
