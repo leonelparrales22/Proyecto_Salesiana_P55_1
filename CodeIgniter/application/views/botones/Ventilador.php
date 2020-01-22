@@ -102,9 +102,8 @@ Encender/Apagar Ventilador:
 <br>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="<?php echo base_url();?>vendor/jquery/jquery.min.js"></script>
     <!-- Frontend Logic -->
-<script src="<?php echo base_url();?>app.js"></script>
+<script src="<?php echo base_url();?>application/assets/js/app.js"></script>
 
 

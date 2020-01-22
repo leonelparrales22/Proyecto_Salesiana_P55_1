@@ -22,5 +22,9 @@ class Presion extends CI_Controller {
         $this->load->view('encabezados/header.php');
         $this->load->view('presion/TablaPresion.php',$data);
     }
+
+    function llamadaBase(){
+        $this->load->view('presion/BDDPresion.php');
+    }
 }
 ?>

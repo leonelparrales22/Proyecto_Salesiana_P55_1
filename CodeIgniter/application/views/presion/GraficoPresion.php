@@ -33,8 +33,8 @@ Highcharts.chart('container', {
                 myTimervar = setInterval( async function () {
 
                     var x = (new Date()).getTime(), // current time
-                        y = parseInt(await fetch('<?php echo base_url();?>BDDPresion1.php')
-                                .then( respuesta => respuesta.text() ));
+                    y = parseInt(await fetch('<?php echo base_url();?>index.php/Presion/llamadabase')
+                              .then( respuesta => respuesta.text() ));  
                     console.log('y=',y);
                     series.addPoint([x, y], true, true);
 

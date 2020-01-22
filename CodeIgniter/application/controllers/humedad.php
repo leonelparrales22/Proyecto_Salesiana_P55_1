@@ -22,5 +22,9 @@ class Humedad extends CI_Controller {
         $this->load->view('encabezados/header.php',$data);
         $this->load->view('humedad/TablaHumedad.php');
     }
+
+    function llamadaBase(){
+        $this->load->view('humedad/BDDHumedad.php');
+    }
 }
 ?>

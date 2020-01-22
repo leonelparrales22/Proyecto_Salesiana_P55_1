@@ -15,5 +15,14 @@ class HumedadModelo extends CI_Model {
         $query = $this->db->query('SELECT * FROM humedad');
         return $query;
     }
+
+    function grafica_RealTime(){
+        $this->load->database();
+        $query = $this->db->query('select * from humedad ORDER BY fecha DESC LIMIT 1');
+        foreach ($query->result_array() as $reg) {
+            echo $reg['humedad'];
+        }
+        //return $query;
+    }
 }
 ?>

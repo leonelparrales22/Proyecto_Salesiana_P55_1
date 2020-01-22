@@ -16,13 +16,6 @@ class TemperaturaModelo extends CI_Model {
         return $query;
     }
 
-    //function grafica_RealTime(){
-    //    $query = $this->db->query('select * from temperatura ORDER BY fecha DESC LIMIT 1');
-    //    foreach ($query->result_array() as $reg) {
-    //        return $reg['temperatura'];
-    //   }
-    //}
-
     function grafica_RealTime(){
         $this->load->database();
         $query = $this->db->query('select * from temperatura ORDER BY fecha DESC LIMIT 1');
@@ -30,7 +23,7 @@ class TemperaturaModelo extends CI_Model {
             echo $reg['temperatura'];
         }
         //return $query;
-      }
+    }
     }
     
 ?>

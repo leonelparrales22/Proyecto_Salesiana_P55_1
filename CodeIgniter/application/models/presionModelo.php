@@ -15,5 +15,14 @@ class PresionModelo extends CI_Model {
         $query = $this->db->query('SELECT * FROM presion');
         return $query;
     }
+
+    function grafica_RealTime(){
+        $this->load->database();
+        $query = $this->db->query('select * from presion ORDER BY fecha DESC LIMIT 1');
+        foreach ($query->result_array() as $reg) {
+            echo $reg['presion'];
+        }
+        //return $query;
+    }
 }
 ?>
