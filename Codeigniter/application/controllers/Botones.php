@@ -6,11 +6,14 @@ class Botones extends CI_Controller {
         parent::__construct();
         $this->load->helper('mihelper');
         $this->load->helper('url');
+        $this->load->model('ActuadoresModelo');
+        $this->load->database();
     }
 
     function Foco(){
+        $data["datos"]= $this->ActuadoresModelo->estado_Foco();
         $this->load->view('encabezados/header.php');
-        $this->load->view('botones/Foco.php');
+        $this->load->view('botones/Foco.php',$data);
         $this->load->view('encabezados/footer.php');
     }
 

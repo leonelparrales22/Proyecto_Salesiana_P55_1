@@ -77,20 +77,12 @@ Encender/Apagar Foco:
           <input class="active" type="checkbox" 
           
           <?php
-          //include(echo base_url();'database.php');
-          $conexion = mysqli_connect("localhost", "leonel", "123456", "p1") or
-          die("Problemas con la conexion");
-          $registros = mysqli_query($conexion, 'SELECT * FROM `activadores` WHERE nombre="FOCO"') or
-          die("Problemas en el select:" . mysqli_error($conexion));
-
-          while ($reg = mysqli_fetch_array($registros)) {
-           $reg['estado'];
-
+          foreach ($datos->result_array() as $reg) {
+          $reg['estado'];
            if ($reg['estado']==1) {
               echo ' checked="checked"';
             }
           }
-          mysqli_close($conexion);
           ?>
           
           >

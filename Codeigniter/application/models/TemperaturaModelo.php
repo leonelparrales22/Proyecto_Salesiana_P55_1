@@ -24,6 +24,7 @@ class TemperaturaModelo extends CI_Model {
         }
         //return $query;
     }
+
     }
     
 ?>
