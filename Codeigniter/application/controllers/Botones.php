@@ -22,5 +22,21 @@ class Botones extends CI_Controller {
         $this->load->view('botones/Ventilador.php');
         $this->load->view('encabezados/footer.php');
     }
+
+    function VentiladorOn(){
+        $this->load->view('botones/VentiladorOn.php');
+    }
+
+    function VentiladorOff(){
+        $this->load->view('botones/VentiladorOn.php');
+    }
+
+    function FocoOn(){
+        $this->load->view('botones/FocoOn.php');
+    }
+
+    function FocoOff(){
+        $this->load->view('botones/FocoOff.php');
+    }
 }
 ?>
