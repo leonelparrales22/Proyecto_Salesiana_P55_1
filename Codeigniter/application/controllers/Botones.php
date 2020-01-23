@@ -18,8 +18,9 @@ class Botones extends CI_Controller {
     }
 
     function Ventilador(){
+        $data["datos"]= $this->ActuadoresModelo->estado_Ventilador();
         $this->load->view('encabezados/header.php');
-        $this->load->view('botones/Ventilador.php');
+        $this->load->view('botones/Ventilador.php',$data);
         $this->load->view('encabezados/footer.php');
     }
 

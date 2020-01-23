@@ -11,6 +11,11 @@ class ActuadoresModelo extends CI_Model {
         return $query;
     }
 
+    function estado_Ventilador(){
+        $query = $this->db->query('SELECT * FROM `activadores` WHERE nombre="VENTILADOR"');    
+        return $query;
+    }
+
     function FocoOn(){
         $this->db->query('UPDATE activadores SET estado=true WHERE nombre="FOCO";');
         $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"FOCO SE ENCENDIO");');
@@ -22,12 +27,12 @@ class ActuadoresModelo extends CI_Model {
     }
 
     function VentiladorOn(){
-        $this->db->query('UPDATE activadores SET estado=true WHERE nombre="FOCO";');
-        $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"FOCO SE ENCENDIO");');
+        $this->db->query('UPDATE activadores SET estado=true WHERE nombre="VENTILADOR";');
+        $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"VENTILADOR SE ENCENDIO");');
     }
 
     function VentiladorOff(){
-        $this->db->query('UPDATE activadores SET estado=false WHERE nombre="FOCO";');
-        $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"FOCO SE APAGÓ");');
+        $this->db->query('UPDATE activadores SET estado=false WHERE nombre="VENTILADOR";');
+        $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"VENTILADOR SE APAGÓ");');
     }
 ?>
