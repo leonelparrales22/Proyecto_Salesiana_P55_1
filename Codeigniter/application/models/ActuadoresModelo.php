@@ -14,9 +14,15 @@ class ActuadoresModelo extends CI_Model {
         return $query;
     }
 
+    function FocoOn(){
+        $this->db->query('UPDATE activadores SET estado=true WHERE nombre="FOCO";');
+        $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"FOCO SE ENCENDIO");');
+    }
 
-
-
+    function FocoOff(){
+        $this->db->query('UPDATE activadores SET estado=false WHERE nombre="FOCO";');
+        $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"FOCO SE APAGO");');
+    }
 
     function ver_Registros_Humedad(){
         $query = $this->db->query('SELECT * FROM humedad');
