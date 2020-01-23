@@ -3,15 +3,14 @@ $(document).ready(function() {
         var check_active = $(this).is(':checked') ? 1 : 0;
         if(parseInt(check_active)==1){
             $.ajax({
-                url: '../../BDDVentilador1.php',
+                url: 'VentiladorOn',
                 type: 'POST'
             })
         } else {
             $.ajax({
-                url: '../../BDDVentilador0.php',
+                url: 'VentiladorOff',
                 type: 'POST'
             })
         }
     });
-
-  });
+});
