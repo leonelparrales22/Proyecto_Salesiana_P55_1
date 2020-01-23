@@ -3,8 +3,9 @@ function fetchdata(){
      url: 'llamadaBase',
      type: 'post',
      success: function(response){
-      alert(response);
-      console.log("LEONEL");
+        //alert(response);
+        //console.log("LEONEL");
+        document.getElementById('miTabla').innerHTML = "<h1>Hola<";
      }
     });
    }
