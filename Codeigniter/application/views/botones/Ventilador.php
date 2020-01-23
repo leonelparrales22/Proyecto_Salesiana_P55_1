@@ -70,7 +70,7 @@ Encender/Apagar Ventilador:
 <br>
 <center>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-<img src="<?php echo base_url();?>img/Ventilador.jpg" alt="Smiley face" height="300" width="300">
+<img src="<?php echo base_url();?>application/assets/img/Ventilador.jpg" alt="Smiley face" height="300" width="300">
 <br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
 <label class="switch">
