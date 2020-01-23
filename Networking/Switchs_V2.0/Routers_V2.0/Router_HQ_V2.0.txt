@@ -1,0 +1,183 @@
+HQ#show running-config
+Building configuration...
+
+
+Current configuration : 4908 bytes
+!
+! Last configuration change at 20:41:12 UTC Thu Jan 23 2020
+!
+version 16.9
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+!
+hostname HQ
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+ip dhcp pool Administrador
+ network 172.16.10.0 255.255.255.0
+ default-router 172.16.10.1
+ dns-server 8.8.8.8
+!
+ip dhcp pool WebDesigner
+ network 172.16.20.0 255.255.255.0
+ default-router 172.16.20.1
+ dns-server 8.8.8.8
+!
+ip dhcp pool Clientes
+ network 172.16.30.0 255.255.255.0
+ default-router 172.16.30.1
+ dns-server 8.8.8.8
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+multilink bundle-name authenticated
+!
+!
+!
+crypto pki trustpoint TP-self-signed-2690393081
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2690393081
+ revocation-check none
+ rsakeypair TP-self-signed-2690393081
+!
+!
+crypto pki certificate chain TP-self-signed-2690393081
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 32363930 33393330 3831301E 170D3230 30313233 31373233
+  31385A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 36393033
+  39333038 31308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201
+  0A028201 0100BD69 CF3DB09B 32C2BBFA D5BB208E BEA97C63 10F54B30 7B7D6B12
+  F02AC369 532A729D 688DA51A 23765EDB 239E1543 78E782FE 95300CBF 97035F78
+  7F2390FF C37ED3FD F0CA889A 33923FA3 C1CA4C62 8D55B202 77600919 2804D964
+  5670FDCA DBA53E85 5423D7C6 0D476DA8 D751DE33 CBBB2734 D64E8EBF 2099B58B
+  D280CD87 4E19142B 6BC21ADD E1B32434 74D1EC59 2E759475 F6990132 1CFD2A85
+  E372ECD9 D04A2290 165D15AE 394024E2 1176AF9D 2A0EDBDB 7340E71F C349BB1A
+  F5457D3A F8D5B593 CFCE2DA3 DBD0E29D CC1C7D55 E0E8FBAF 2E9C994D 7BF8DD9A
+  2D2E426D D1BB30C7 ABCA081F 9A472916 58EA1874 50FEC33A ACEB9EEE 08D15712
+  9729BEB0 16730203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF
+  301F0603 551D2304 18301680 14899758 CBF0306C D1CDFE5B FE790644 80F9B8FB
+  6D301D06 03551D0E 04160414 899758CB F0306CD1 CDFE5BFE 79064480 F9B8FB6D
+  300D0609 2A864886 F70D0101 05050003 82010100 608CC503 38992CE7 6E506C41
+  B274E5B0 1C01DD41 0DA9D039 23572D27 7BD300A3 6F895713 642CBF86 DCEA4844
+  BF09B1EB 75BA9481 9BCC74CD BBB3DC10 DE2DFE51 3A7C933A 2175FA00 CE3DDA7E
+  10E1C20E CD3753CA 30CD246C E32A80CE 3CC49AF7 3F1F1F39 03DF710E 7790A256
+  D9B941B7 B7AC83A7 112A72E2 D39724D9 5F693EE7 0FDD21D0 446CC021 314CD26E
+  5BF067F6 A07B589A 98A3AA64 FE9D4077 399164B4 DA0BA004 F89A76C8 FB5FF3DE
+  1FC5C9A8 F3FF128F 3D0F8B55 5C352A04 FD4CE9DA 214F4109 784AE182 AFC8465B
+  AAC27520 FE9A27C0 33642E8E 8EF96B81 B39FEBF0 7E24B496 9C5D72BC A31C6D9C
+  B468446A F3D635A3 0AD023DC 7B145A99 621BCC93
+        quit
+!
+license udi pid ISR4221/K9 sn FJC2308A07U
+no license smart enable
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+!
+!
+!
+redundancy
+ mode none
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/0/0.10
+ encapsulation dot1Q 10
+ ip address 172.16.10.1 255.255.255.0
+!
+interface GigabitEthernet0/0/0.20
+ encapsulation dot1Q 20
+ ip address 172.16.20.1 255.255.255.0
+!
+interface GigabitEthernet0/0/0.30
+ encapsulation dot1Q 30
+ ip address 172.16.30.1 255.255.255.0
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ ip access-group 103 in
+ ip access-group 104 out
+ negotiation auto
+!
+interface Serial0/1/0
+ ip address 200.165.209.65 255.255.255.252
+!
+interface Serial0/1/1
+ ip address 10.10.10.9 255.255.255.252
+!
+router ospf 1
+ network 10.10.10.0 0.0.0.3 area 1
+ network 10.10.10.8 0.0.0.3 area 1
+ network 172.16.10.0 0.0.0.255 area 1
+ network 172.16.20.0 0.0.0.255 area 1
+ network 172.16.30.0 0.0.0.255 area 1
+ network 200.165.209.0 0.0.0.3 area 1
+ network 200.165.209.64 0.0.0.3 area 1
+!
+ip forward-protocol nd
+no ip http server
+ip http secure-server
+ip route 180.165.100.0 255.255.255.252 10.10.10.10
+ip route 180.165.100.32 255.255.255.252 200.165.209.66
+ip route 192.168.0.0 255.255.255.0 200.165.209.66
+ip route 192.168.0.0 255.255.255.0 10.10.10.10
+!
+!
+access-list 103 permit tcp 172.16.20.0 0.0.0.255 any eq www
+access-list 103 permit tcp 172.16.20.0 0.0.0.255 any eq 443
+access-list 104 permit tcp any 172.16.20.0 0.0.0.255 established
+access-list 105 permit tcp 172.16.30.0 0.0.0.255 any eq www
+access-list 105 permit tcp 172.16.30.0 0.0.0.255 any eq 443
+access-list 106 permit tcp any 172.16.30.0 0.0.0.255 established
+access-list 108 permit tcp 172.16.20.0 0.0.0.255 any eq 22
+access-list 109 permit tcp any 172.16.20.0 0.0.0.255 established
+!
+!
+!
+!
+control-plane
+!
+banner motd ^CACCESO NO AUTORIZADO^C
+!
+line con 0
+ transport input none
+ stopbits 1
+line vty 0 4
+ login
+!
+!
+!
+!
+!
+!
+end
