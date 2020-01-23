@@ -1,0 +1,163 @@
+Building configuration...
+
+Current configuration : 3678 bytes
+!
+! Last configuration change at 05:13:17 UTC Mon Mar 1 1993
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname S1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-902142080
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-902142080
+ revocation-check none
+ rsakeypair TP-self-signed-902142080
+!
+!
+crypto pki certificate chain TP-self-signed-902142080
+ certificate self-signed 01
+  30820229 30820192 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 39303231 34323038 30301E17 0D393330 33303130 30303130
+  315A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3930 32313432
+  30383030 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100
+  EDC424F3 2B414D61 6D23C405 71325704 31AA0553 926E93F9 5BDC90C7 2637CA8B
+  F8C1B3B6 58FAE8EC 695A9A91 61C82BFC 5B810E5F C99A0358 F0D5821B 5BF02C6A
+  DFA1078C A21AC5ED A90A087A 5F0925C2 ED2C5A1C 31C7787E 378DF1A1 2E8732DC
+  9D427DF4 04723B6A AF2E5DD5 4E0B838E 909AF9E4 3439F175 D376CA3E D032295F
+  02030100 01A35330 51300F06 03551D13 0101FF04 05300301 01FF301F 0603551D
+  23041830 168014E3 4DCB7B69 AA5654D0 8E1D2C23 5B55E660 B50B4830 1D060355
+  1D0E0416 0414E34D CB7B69AA 5654D08E 1D2C235B 55E660B5 0B48300D 06092A86
+  4886F70D 01010505 00038181 00B9A65A CAB211A3 24FD1987 EDE582EE 9E3016FB
+  05B6BD60 CC1806A0 99AF332A A7B065E6 CD825194 09FD930D 492CF2A7 906D98A0
+  D644D186 7F9872C4 6A12A4A3 B1D2E357 A65B2C43 29F07A7D 7C1C7836 60A97835
+  F423A8CF 97A104B9 788D5451 86130932 591A8D56 E38F090F FE1108A0 3E75095E
+  2C423F8B B88D2B1B BAD8EA04 9E
+        quit
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ switchport trunk allowed vlan 10,20,30
+ switchport mode trunk
+!
+interface Port-channel3
+ switchport trunk allowed vlan 10,20,30
+ switchport mode trunk
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+ switchport trunk allowed vlan 10,20,30
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface FastEthernet0/20
+ switchport trunk allowed vlan 10,20,30
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface FastEthernet0/21
+ switchport trunk allowed vlan 10,20,30
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 3 mode passive
+!
+interface FastEthernet0/22
+ switchport trunk allowed vlan 10,20,30
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 3 mode passive
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ switchport trunk allowed vlan 10,20,30
+ switchport mode trunk
+ tx-ring-limit 100
+ tx-queue-limit 100
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+!
+ip http server
+ip http secure-server
+!
+no vstack
+banner motd ^CCACCESO NO AUTORIZADO^C
+!
+line con 0
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+end
