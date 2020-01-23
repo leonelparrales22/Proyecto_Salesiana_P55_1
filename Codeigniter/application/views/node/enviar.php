@@ -1,7 +1,10 @@
 <?php
-    //$OrderLines=$this->input->post('orderlines');
+    //$temperatura=$this->input->post('temperatura');
+    //$humedad=$this->input->post('humedad');
+    
     //$temperatura = $_POST ['temperatura'];
     //$humedad = $_POST ['humedad'];
-    //echo $this->nodeModelo->enviar_Datos($temperatura,$humedad);
+    
+    //$this->NodeModelo->enviar_Datos($temperatura,$humedad);
     echo 'leo';
 ?>
