@@ -38,5 +38,32 @@ class Temperatura extends CI_Controller {
         $this->load->view('temperatura/BDDTemperatura.php');
     }
 
+    function Reporte_Temperatura_PDF(){
+        //$this->load->view('temperatura/PDF.php');
+        //$viewdata["datos"]= $this->TemperaturaModelo->ver_Registros_Temperatura();
+        //$html = $this->load->view('temperatura/PDF.php', $viewdata, TRUE);
+        // Cargamos la librería
+        //$this->load->library('pdfgenerator');
+        // definamos un nombre para el archivo. No es necesario agregar la extension .pdf
+        //$filename = 'comprobante_pago';
+        // generamos el PDF. Pasemos por encima de la configuración general y definamos otro tipo de papel
+        //$this->pdfgenerator->generate($html, $filename, true, 'Letter', 'portrait');
+
+        
+        $this->load->library('pdfgenerator');
+        $data["datos"]= $this->TemperaturaModelo->ver_Registros_Temperatura();
+		$html = $this->load->view('temperatura/PDF.php',$data, TRUE);
+
+		$dompdf = new Pdfgenerator();
+		$dompdf->load_html($html);
+		$dompdf->render();
+		//$output = $dompdf->output();
+		//file_put_contents('test.pdf', $output);
+        $dompdf->stream('ReporteTemperatura.pdf', array("Attachment"=>0));
+
+    }
+
+
+
 }
 ?>

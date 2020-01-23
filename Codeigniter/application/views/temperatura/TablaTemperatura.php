@@ -5,7 +5,12 @@
 
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">Temperatura</h1>
-        <p class="mb-4">En esta tabla se muestran todos los registros de la temperatura con su fecha correspondiente.</p>
+        <p class="mb-4">En esta tabla se muestran todos los registros de la temperatura con su fecha correspondiente. &nbsp 
+        
+        <a class="btn btn-success" href="<?php echo base_url();?>index.php/Temperatura/Reporte_Temperatura_PDF"" target="_blank">Descargar PDF</a>
+        <a class="btn btn-success" href="<?php echo base_url();?>index.php/Temperatura/Reporte_Temperatura_PDF"" target="_blank">Descargar CSV</a>
+
+        </p>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
