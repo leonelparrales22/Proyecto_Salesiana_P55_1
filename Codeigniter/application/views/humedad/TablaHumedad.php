@@ -4,10 +4,10 @@
 
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Humedad</h1>
-<p class="mb-4">En esta tabla se muestran todos los registros de la humedad con su fecha correspondiente.
+<p class="mb-4">En esta tabla se muestran todos los registros de la humedad con su fecha correspondiente. &nbsp
 
 <a class="btn btn-success" href="<?php echo base_url();?>index.php/Humedad/Reporte_Humedad_PDF"" target="_blank">Descargar PDF</a>
-        <a class="btn btn-success" href="<?php echo base_url();?>index.php/Humedad/Reporte_Humedad_PDF"" target="_blank">Descargar CSV</a>
+        <a class="btn btn-success" href="<?php echo base_url();?>index.php/Humedad/Reporte_Humedad_CSV"" target="_blank">Descargar CSV</a>
 
 </p>
 

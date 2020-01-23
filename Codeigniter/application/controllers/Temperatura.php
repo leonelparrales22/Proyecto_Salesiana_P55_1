@@ -44,7 +44,29 @@ class Temperatura extends CI_Controller {
 		$dompdf = new Pdfgenerator();
 		$dompdf->load_html($html);
 		$dompdf->render();
-        $dompdf->stream('Reporte_Temperatura.pdf', array("Attachment"=>0));
+        $dompdf->stream('Reporte_Temperatura_en_'.date('Ymd').'.pdf', array("Attachment"=>0));
+    }
+
+    function Reporte_Temperatura_CSV(){
+        $file_name = 'Reporte_Temperatura_en_'.date('Ymd').'.csv'; 
+        header("Content-Description: File Transfer"); 
+        header("Content-Disposition: attachment; filename=$file_name"); 
+        header("Content-Type: application/csv;");
+   
+        // get data 
+        $student_data = $this->TemperaturaModelo->ver_Registros_Temperatura();
+
+        // file creation 
+        $file = fopen('php://output', 'w');
+ 
+        $header = array("id_temperatura","fecha","temperatura"); 
+        fputcsv($file, $header);
+        foreach ($student_data->result_array() as $key => $value)
+        { 
+        fputcsv($file, $value); 
+        }
+        fclose($file); 
+        exit; 
     }
 }
 ?>

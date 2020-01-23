@@ -4,9 +4,9 @@
 
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Presión</h1>
-<p class="mb-4">En esta tabla se muestran todos los registros de la presión con su fecha correspondiente.
+<p class="mb-4">En esta tabla se muestran todos los registros de la presión con su fecha correspondiente. &nbsp
 <a class="btn btn-success" href="<?php echo base_url();?>index.php/Presion/Reporte_Presion_PDF"" target="_blank">Descargar PDF</a>
-<a class="btn btn-success" href="<?php echo base_url();?>index.php/Presion/Reporte_Presion_PDF"" target="_blank">Descargar CSV</a>
+<a class="btn btn-success" href="<?php echo base_url();?>index.php/Presion/Reporte_Presion_CSV"" target="_blank">Descargar CSV</a>
 
 </p>
 

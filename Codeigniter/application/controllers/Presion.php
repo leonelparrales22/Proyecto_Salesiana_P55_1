@@ -34,7 +34,29 @@ class Presion extends CI_Controller {
 		$dompdf = new Pdfgenerator();
 		$dompdf->load_html($html);
 		$dompdf->render();
-        $dompdf->stream('Reporte_Presion.pdf', array("Attachment"=>0));
+        $dompdf->stream('Reporte_Presion_en'.date('Ymd').'.pdf', array("Attachment"=>0));
+    }
+
+    function Reporte_Presion_CSV(){
+        $file_name = 'Reporte_Presion_en_'.date('Ymd').'.csv'; 
+        header("Content-Description: File Transfer"); 
+        header("Content-Disposition: attachment; filename=$file_name"); 
+        header("Content-Type: application/csv;");
+   
+        // get data 
+        $student_data = $this->PresionModelo->ver_Registros_Presion();
+
+        // file creation 
+        $file = fopen('php://output', 'w');
+ 
+        $header = array("id_presion","fecha","presion"); 
+        fputcsv($file, $header);
+        foreach ($student_data->result_array() as $key => $value)
+        { 
+        fputcsv($file, $value); 
+        }
+        fclose($file); 
+        exit; 
     }
 }
 ?>

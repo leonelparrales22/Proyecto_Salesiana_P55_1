@@ -8,7 +8,7 @@
         <p class="mb-4">En esta tabla se muestran todos los registros de la temperatura con su fecha correspondiente. &nbsp 
         
         <a class="btn btn-success" href="<?php echo base_url();?>index.php/Temperatura/Reporte_Temperatura_PDF"" target="_blank">Descargar PDF</a>
-        <a class="btn btn-success" href="<?php echo base_url();?>index.php/Temperatura/Reporte_Temperatura_PDF"" target="_blank">Descargar CSV</a>
+        <a class="btn btn-success" href="<?php echo base_url();?>index.php/Temperatura/Reporte_Temperatura_CSV"" target="_blank">Descargar CSV</a>
 
         </p>
 
