@@ -35,4 +35,5 @@ class ActuadoresModelo extends CI_Model {
         $this->db->query('UPDATE activadores SET estado=false WHERE nombre="VENTILADOR";');
         $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"VENTILADOR SE APAGÓ");');
     }
+}
 ?>
