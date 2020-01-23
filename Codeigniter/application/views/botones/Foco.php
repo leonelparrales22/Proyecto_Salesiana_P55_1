@@ -84,7 +84,6 @@ Encender/Apagar Foco:
             }
           }
           ?>
-          
           >
 
           <div class="slider round"></div>

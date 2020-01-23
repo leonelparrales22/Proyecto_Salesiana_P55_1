@@ -7,10 +7,7 @@ class ActuadoresModelo extends CI_Model {
     }
 
     function estado_Foco(){
-        $query = $this->db->query('SELECT * FROM `activadores` WHERE nombre="FOCO"');
-        //foreach ($query->result_array() as $reg) {
-        //    echo $reg['humedad'];
-        //}
+        $query = $this->db->query('SELECT * FROM `activadores` WHERE nombre="FOCO"');    
         return $query;
     }
 
@@ -21,21 +18,16 @@ class ActuadoresModelo extends CI_Model {
 
     function FocoOff(){
         $this->db->query('UPDATE activadores SET estado=false WHERE nombre="FOCO";');
-        $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"FOCO SE APAGO");');
+        $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"FOCO SE APAGÓ");');
     }
 
-    function ver_Registros_Humedad(){
-        $query = $this->db->query('SELECT * FROM humedad');
-        return $query;
+    function VentiladorOn(){
+        $this->db->query('UPDATE activadores SET estado=true WHERE nombre="FOCO";');
+        $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"FOCO SE ENCENDIO");');
     }
 
-    function grafica_RealTime(){
-        $this->load->database();
-        $query = $this->db->query('select * from humedad ORDER BY fecha DESC LIMIT 1');
-        foreach ($query->result_array() as $reg) {
-            echo $reg['humedad'];
-        }
-        //return $query;
+    function VentiladorOff(){
+        $this->db->query('UPDATE activadores SET estado=false WHERE nombre="FOCO";');
+        $this->db->query('INSERT INTO registro (fecha,descripcion) VALUES(CURRENT_TIMESTAMP(),"FOCO SE APAGÓ");');
     }
-}
 ?>
