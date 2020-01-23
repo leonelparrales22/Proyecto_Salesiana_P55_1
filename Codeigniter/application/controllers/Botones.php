@@ -29,7 +29,7 @@ class Botones extends CI_Controller {
     }
 
     function VentiladorOff(){
-        $this->load->view('botones/VentiladorOn.php');
+        $this->load->view('botones/VentiladorOff.php');
     }
 
     function FocoOn(){
