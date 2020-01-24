@@ -12,6 +12,7 @@ CREATE TABLE activadores (
                 id_activador INT AUTO_INCREMENT NOT NULL,
                 nombre VARCHAR(20) NOT NULL,
                 estado BOOLEAN NOT NULL,
+		bandera INT NOT NULL,
                 PRIMARY KEY (id_activador)
 );
 
