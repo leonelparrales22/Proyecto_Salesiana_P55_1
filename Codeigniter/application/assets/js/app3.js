@@ -1,11 +1,11 @@
 function fetchdata(){
     $.ajax({
-     url: 'llamadaBase',
+     url: 'TablaTemperaturaDinamica',
      type: 'post',
      success: function(response){
         //alert(response);
         //console.log("LEONEL");
-        document.getElementById('miTabla').innerHTML = "<h1>Hola<";
+        document.getElementById('miTabla').innerHTML = response;
      }
     });
    }

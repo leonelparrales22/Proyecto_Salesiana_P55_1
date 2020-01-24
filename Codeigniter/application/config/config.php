@@ -28,8 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$config['base_url'] = 'http://192.168.0.194/GitHub/Codeigniter/';
 
 
-$config['base_url'] = 'http://192.168.43.79/GitHub/Codeigniter/';
-
+$config['base_url'] = 'http://192.168.0.194/GitHub/Codeigniter/';
 
 
 

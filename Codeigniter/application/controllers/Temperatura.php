@@ -70,7 +70,7 @@ class Temperatura extends CI_Controller {
     }
 
     function TablaTemperaturaDinamica(){
-        $data["datos"]= $this->TemperaturaModelo->ver_Registros_Temperatura();
+        $data["datos"]= $this->TemperaturaModelo->ver_Registros_Temperatura20();
         $this->load->view('temperatura/TablaDinamica.php',$data);
     }
 

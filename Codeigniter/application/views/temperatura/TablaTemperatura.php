@@ -1,6 +1,4 @@
-
-       <!-- Begin Page Content -->
-
+       <!-- Begin Page Content --> 
        <div class="container-fluid">
 
         <!-- Page Heading -->
@@ -17,6 +15,7 @@
           <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Tabla Temperatura</h6>
           </div>
+
           <div class="card-body">
             <div class="table-responsive" id="miTabla">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -44,7 +43,7 @@
                     echo "<td>".$reg['temperatura']."</td>";  
                     echo "</tr>";
                     }
-                  ?>
+                  ?>  
 
                 </tbody>
               </table>
@@ -99,16 +98,10 @@
       </div>
     </div>
   </div>
-
-  
   
   <script src="<?php echo base_url();?>application/assets/vendor/jquery/jquery.min.js"></script>
     <!-- Frontend Logic -->
   <script src="<?php echo base_url();?>application/assets/js/app3.js"></script>                   
-
-
-
-
 
   <!-- Bootstrap core JavaScript-->
   <script src="<?php echo base_url();?>application/assets/vendor/jquery/jquery.min.js"></script>
@@ -126,31 +119,6 @@
 
   <!-- Page level custom scripts -->
   <script src="<?php echo base_url();?>application/assets/js/demo/datatables-demo.js"></script>
-
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
