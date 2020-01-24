@@ -1,4 +1,7 @@
 <h1>Humedad</h1>
+<?php
+echo date('Y-m-d');
+?>
 
 <table border= "1" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
