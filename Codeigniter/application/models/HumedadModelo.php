@@ -24,5 +24,10 @@ class HumedadModelo extends CI_Model {
         }
         //return $query;
     }
+
+    function ver_Registros_Humedad20(){
+        $query = $this->db->query('SELECT * FROM humedad ORDER BY fecha DESC LIMIT 20');
+        return $query;
+    }
 }
 ?>

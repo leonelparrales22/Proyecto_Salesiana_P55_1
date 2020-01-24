@@ -17,7 +17,7 @@
     <h6 class="m-0 font-weight-bold text-primary">Tabla Humedad</h6>
   </div>
   <div class="card-body">
-    <div class="table-responsive">
+    <div class="table-responsive" id="miTabla">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
@@ -63,26 +63,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-<!-- Footer -->
-<footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
-
     </div>
     <!-- End of Content Wrapper -->
 
@@ -112,6 +92,11 @@
       </div>
     </div>
   </div>
+
+  <script src="<?php echo base_url();?>application/assets/vendor/jquery/jquery.min.js"></script>
+    <!-- Frontend Logic -->
+  <script src="<?php echo base_url();?>application/assets/js/app4.js"></script>                   
+
 
   <!-- Bootstrap core JavaScript-->
   <script src="<?php echo base_url();?>application/assets/vendor/jquery/jquery.min.js"></script>

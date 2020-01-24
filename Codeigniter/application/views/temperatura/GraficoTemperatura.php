@@ -1,4 +1,4 @@
-<script src="<?php echo base_url();?>code/highcharts.js"></script>
+SELECT * FROM temperatura ORDER BY fecha DESC LIMIT 20<script src="<?php echo base_url();?>code/highcharts.js"></script>
 <script src="<?php echo base_url();?>code/modules/exporting.js"></script>
 <script src="<?php echo base_url();?>code/modules/export-data.js"></script>
 <script src="<?php echo base_url();?>code/modules/accessibility.js"></script>
@@ -14,7 +14,7 @@
 
 
 <script type="text/javascript">
-var myTimervar;
+var myTimervar;SELECT * FROM temperatura ORDER BY fecha DESC LIMIT 20SELECT * FROM temperatura ORDER BY fecha DESC LIMIT 20
 var contador=1;
 
 Highcharts.chart('container', {

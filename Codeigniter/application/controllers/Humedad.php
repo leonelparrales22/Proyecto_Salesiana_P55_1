@@ -18,9 +18,10 @@ class Humedad extends CI_Controller {
     }
 
     function TablaHumedad(){
-        $data["datos"]= $this->HumedadModelo->ver_Registros_Humedad();
+        $data["datos"]= $this->HumedadModelo->ver_Registros_Humedad20();
         $this->load->view('encabezados/header.php',$data);
         $this->load->view('humedad/TablaHumedad.php');
+        $this->load->view('encabezados/footer.php');
     }
 
     function llamadaBase(){
@@ -58,5 +59,13 @@ class Humedad extends CI_Controller {
         fclose($file); 
         exit; 
     }
+
+    function TablaHumedadDinamica(){
+        $data["datos"]= $this->HumedadModelo->ver_Registros_Humedad20();
+        $this->load->view('humedad/TablaDinamica.php',$data);
+    }
+
+
+    
 }
 ?>

@@ -115,7 +115,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Mostrar Gráfico:</h6>
             <a class="collapse-item" href="<?php echo base_url();?>index.php/Temperatura/GraficoTemperatura">Temperatura</a>
-            <a class="collapse-item" href="<?php echo base_url();?>index.php/Presion/GraficoPresion">Presión</a>
+            <!-- <a class="collapse-item" href="<?php echo base_url();?>index.php/Presion/GraficoPresion">Presión</a> -->
             <a class="collapse-item" href="<?php echo base_url();?>index.php/Humedad/GraficoHumedad">Humedad</a>
           </div>
         </div>
@@ -160,7 +160,7 @@
             <h6 class="collapse-header">Seleccione Reporte:</h6>
             <a class="collapse-item" href="<?php echo base_url();?>index.php/Temperatura/TablaTemperatura">Temperatura</a>
             <a class="collapse-item" href="<?php echo base_url();?>index.php/Humedad/TablaHumedad">Humedad</a>
-            <a class="collapse-item" href="<?php echo base_url();?>index.php/Presion/TablaPresion">Presión</a>
+            <!-- <a class="collapse-item" href="<?php echo base_url();?>index.php/Presion/TablaPresion">Presión</a> -->
             <div class="collapse-divider"></div>
           </div>
         </div>
