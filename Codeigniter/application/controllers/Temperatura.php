@@ -22,7 +22,6 @@ class Temperatura extends CI_Controller {
         $data["datos"]= $this->TemperaturaModelo->ultimos_Registros();
         $this->load->view('encabezados/header.php');
         $this->load->view('temperatura/GraficoTemperatura.php',$data);
-        
         $this->load->view('encabezados/footer.php');
         
     }

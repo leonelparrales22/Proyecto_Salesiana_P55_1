@@ -77,11 +77,11 @@ Encender/Apagar Foco:
           <input class="active" type="checkbox" 
           
           <?php
-          foreach ($datos->result_array() as $reg) {
-          $reg['estado'];
-           if ($reg['estado']==1) {
-              echo ' checked="checked"';
-            }
+              foreach ($datos->result_array() as $reg) {
+                    $reg['estado'];
+                      if ($reg['estado']==1) {
+                  echo ' checked="checked"';
+              }
           }
           ?>
           >
